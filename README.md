@@ -10,7 +10,22 @@ Making PCBs for a hobbyist can be frustrating because of lead times. While it is
 
 Our solution to this would be to make a highly accessible and inexpensive PCB mill that almost any mid to high level electronics enthusiast could use. The purpose of this mill would not be to replace purchasing of PCBs from actual manufacturers. This mill would serve as a way to make "draft" PCBs that the user could test and verify before sending the design to an actual manufacturer. (If users are satisfied with the quality of the draft PCBs they could just use those in their projects too if they wish.)
 
-# Proposed Solutions
+# Target Audience
+
+There are those that enjoy tinkering and fixing their machines, but there are also those that just want something that works. Our machine would mostly target people who want a PCB mill mostly to use as a tool, not as a hobby. This would mean creating a mill with a solid workflow that doesn't require much intervention.
+
+## Possible Selling Points
+
+In order of importance, aspects of out machine that could distinguish it from others
+
+1) Ease-of-use
+   1) Lower the tedium of using the mill as much as possible 
+2) Reliability
+   1) Keep the failure rate as low as possible.
+3) Accuracy
+   1) The ability to mill better PCBs
+
+# Possible Solutions
 
 - Convert a 3D printer gantry into a pcb mill.
 - Salvage the parts off of already existing 3D printers for parts to make our own gantry.
