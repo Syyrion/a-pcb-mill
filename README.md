@@ -10,6 +10,63 @@ Making PCBs for a hobbyist can be frustrating because of lead times. While it is
 
 Our solution to this would be to make a highly accessible and inexpensive PCB mill that almost any mid to high level electronics enthusiast could use. The purpose of this mill would not be to replace purchasing of PCBs from actual manufacturers. This mill would serve as a way to make "draft" PCBs that the user could test and verify before sending the design to an actual manufacturer. (If users are satisfied with the quality of the draft PCBs they could just use those in their projects too if they wish.)
 
+# Proposed Solutions
+
+- Convert a 3D printer gantry into a pcb mill.
+- Salvage the parts off of already existing 3D printers for parts to make our own gantry.
+- Modify a desktop CNC mill to tailor it for pcb milling (increase its accuracy, etc).
+
+## Decision Matrix
+
+|     | cost | viability | least risk |
+| --- | ---- | --------- | ---------- |
+|
+
+
+## Hardware Requirements
+Our mill should include these hardware features
+
+- Lead screws for all axes
+  - Increases accuracy
+  - Steppers could be geared down for even higher accuracy at the cost of movement speed.
+- Linear Scales for feedback control
+  - Increases accuracy
+- Linear rails for X/Y axes
+  - Reduces vibrations
+  - Better than cylindrical rods
+
+## Minimum Specifications
+Our mill should be able to produce PCBs with these minimum specs and tolerances
+
+- 2-layer milling
+- Minimum track width: 0.25mm
+- Minimum track spacing: 0.25mm
+- Minimum via size: 0.8mm
+- Track width tolerance ±20% (±0.05mm at smallest width)
+
+# Goals
+
+- Make a working gantry
+- Single layer milling
+- Through-hole drilling
+- Solder mask scraping
+  - Make a custom spring-bit to remove rolled on solder mask to expose pads.
+
+## Stretch goals
+- Two layer milling
+  - Finding a reliable way to align the two sides well is super important.
+- Via insertion?
+
+## Super stretch goals
+
+- Pick-and-Place (PnP) attachment
+- Solder paste printer
+
+# Members
+
+- Ricky Cui (EE 2025)
+- Azam Khan (ME 2025)
+
 ## Disadvantages of Alternatives
 
 - **Nasty chemicals**  
@@ -25,34 +82,15 @@ Our solution to this would be to make a highly accessible and inexpensive PCB mi
   
   Also, what even is that conductive paste and where would you get it? It's not solder paste but something else that acts as PCB traces. You might be forever chained to buying the materials from the original manufacturer. I'd also bet that their nominal resistance is higher than that of regular copper traces.
 
-# Members
+# Existing solutions
 
-- Ricky Cui (EE 2025)
-- Azam Khan (ME 2025)
+20W-Fibre Laser. Makes very good results and looks very promising.  
+- https://hackaday.com/2021/01/11/laser-blasts-out-high-quality-pcbs/  
+- https://www.kurokesu.com/main/2021/01/07/making-fine-pitch-pcb-prototypes-with-fiber-laser/
 
-# Goals
+Way too freaking expensive.  
+- https://www.makera.com/products/carvera
+- https://www.voltera.io/v-one
 
-- Rig a 3D printer gantry with an end mill. (What could possibly go wrong?)
-  - Test its accuracy and determine feasibility.
-  - If we can't make the 3D printer accurate enough, we'll have to find some other solution or a compromise.
-- Single layer milling
-  - Cut some copper-clad
-- Through-hole drilling
-- Solder mask scraping
-  - Make a custom spring-bit to remove rolled on solder mask to expose pads.
-
-## Stretch goals
-- Two layer milling
-  - Finding a reliable way to align the two sides well is super important.
-- Via insertion?
-
-## Super stretch goals
-
-- Pick-and-Place (PnP) attachment
-- Solder paste printer
-
-## Specifications
-(We'll figure these out later as we check the feasibility of rigging a 3D printer gantry)
-
-- Minimum track width: ~0.5mm?
-- Minimum via size: ???
+This is just a paste printer. It doesn't mills pcbs. Applying paste is also something you can do by hand with not much effort.  
+- https://www.amazon.com/YUNLAIGOTOP-Horizontal-Adjustment-Packaging-Advertising/dp/B0CG181YCH
