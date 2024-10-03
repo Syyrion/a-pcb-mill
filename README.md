@@ -35,7 +35,8 @@ In order of importance, aspects of out machine that could distinguish it from ot
 
 |     | cost | viability | least risk |
 | --- | ---- | --------- | ---------- |
-|
+
+TODO
 
 
 ## Hardware Requirements
@@ -103,7 +104,7 @@ Our mill should be able to produce PCBs with these minimum specs and tolerances
 - https://hackaday.com/2021/01/11/laser-blasts-out-high-quality-pcbs/  
 - https://www.kurokesu.com/main/2021/01/07/making-fine-pitch-pcb-prototypes-with-fiber-laser/
 
-Way too freaking expensive.  
+Too expensive for most  
 - https://www.makera.com/products/carvera
 - https://www.voltera.io/v-one
 
