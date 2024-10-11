@@ -57,7 +57,7 @@ Our mill should include these hardware features
   - Increases accuracy
 
 ## Minimum Specifications
-Our mill should be able to produce PCBs with these minimum specs and tolerances. This should satisfy milling requirements for a QFP which is the smallest package that most hoobyists would reasonably encounter.
+Our mill should be able to produce PCBs with these minimum specs and tolerances. This should satisfy milling requirements for a QFP which is the smallest package that most hobbyists would reasonably encounter.
 
 - 2-layer milling
 - Minimum track width: 0.25mm
