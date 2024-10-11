@@ -14,7 +14,7 @@ Our solution to this would be to make a highly accessible and inexpensive PCB mi
 
 There are those that enjoy tinkering and fixing their machines, but there are also those that just want something that works. Our machine would mostly target people who want a PCB mill mostly to use as a tool, not as a hobby. This would mean creating a mill with a solid workflow that doesn't require much intervention.
 
-## Possible Selling Points
+## Selling Points
 
 In order of importance, aspects of out machine that could distinguish it from others
 
@@ -37,6 +37,11 @@ In order of importance, aspects of out machine that could distinguish it from ot
 | --- | ---- | --------- | ---------- |
 
 TODO
+- Decision matrix
+- Functional design decomp
+  - What does the CNC *need* to do
+  - Materials, energy, how does it flow through the system
+- More specific constriants
 
 
 ## Hardware Requirements
@@ -45,20 +50,23 @@ Our mill should include these hardware features
 - Lead screws for all axes
   - Increases accuracy
   - Steppers could be geared down for even higher accuracy at the cost of movement speed.
-- Linear Scales for feedback control
-  - Increases accuracy
 - Linear rails for X/Y axes
   - Reduces vibrations
   - Better than cylindrical rods
+- Linear Scales for feedback control
+  - Increases accuracy
 
 ## Minimum Specifications
-Our mill should be able to produce PCBs with these minimum specs and tolerances
+Our mill should be able to produce PCBs with these minimum specs and tolerances. This should satisfy milling requirements for a QFP which is the smallest package that most hoobyists would reasonably encounter.
 
 - 2-layer milling
 - Minimum track width: 0.25mm
 - Minimum track spacing: 0.25mm
 - Minimum via size: 0.8mm
-- Track width tolerance ±20% (±0.05mm at smallest width)
+- Track width tolerance ±20% (±0.05mm at smallest width. Should be possible with lead screws)
+- Minimum build area: 100mmx150mm
+- Maximum CNC base dimensions: 500mmx500mm
+- Maximum CNC height: 400mm (not strict)
 
 # Goals
 
