@@ -38,10 +38,6 @@ In order of importance, aspects of out machine that could distinguish it from ot
 
 TODO
 - Decision matrix
-- Functional design decomp
-  - What does the CNC *need* to do
-  - Materials, energy, how does it flow through the system
-- More specific constriants
 
 ## Functional Decomp
 
