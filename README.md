@@ -94,26 +94,30 @@ Our mill should be able to produce PCBs with these minimum specs and tolerances.
 ## Disadvantages of Alternatives
 
 - **Nasty chemicals**  
-  A low tech way to make PCBs is to mask the traces and etch them using an acid to dissolve away the copper, leaving the traces behind. The masking can be done with a light sensitive photoresist layer on top of the copper that gets removed by a laser or UV light, or some sort of ink that is transferred to the copper. Either way, this is frankly a terrible way to make PCBs. It involves large amounts of chemicals that can be harmful and makes a huge mess. Often the quality of the traces isn't very good and thin traces are very easily destroyed in the process.
+  A low-tech way to make PCBs is to mask the traces and etch them using an acid to dissolve away the copper, leaving the traces behind. The masking can be done with a light sensitive photoresist layer on top of the copper that gets removed by a laser or UV light, or some sort of ink that is transferred to the copper. Either way, this is frankly a terrible way to make PCBs. It involves large amounts of chemicals that can be harmful and makes a huge mess. Often the quality of the traces isn't very good and thin traces are very easily destroyed in the process.
 
 - **Other commercial PCB mills**  
   Decent commercial solutions to at-home PCB manufacturing (i.e. mills that are actually marketed as being able to make PCBs) are pretty much aways in the range of about $3000 to over $5000. This is out of reach for almost all hobbyists. 
 
 - **Additive PCB Manufacturing**  
-  This involves printing the PCB traces with some sort of conductive paste. Some commercial machines on the market use this technique but it comes with some big downsides:
+  This involves printing the PCB traces with some sort of conductive paste. Some commercial machines on the market use this technique but it comes with some downsides:
   
-  Additive PCBs are exotic and seem to be meant only for niche experimental use. The manufacturing process differs so much from a normal PCB you'd order from a regular manufacturer that I find it difficult to believe that you could use one to verify your normal designs meant for subtractive manufacturing.
+  Additive PCBs are exotic and seem to be meant only for niche experimental use. The manufacturing process differs so much from a normal PCB you'd order from a regular manufacturer that it is difficult to believe that you could use one to verify your normal designs meant for subtractive manufacturing.
   
-  Also, what even is that conductive paste and where would you get it? It's not solder paste but something else that acts as PCB traces. You might be forever chained to buying the materials from the original manufacturer. I'd also bet that their nominal resistance is higher than that of regular copper traces.
+  Also, we don't know what the conductive paste is. It's not solder paste but something else that acts as PCB traces. It could be a proprietary thing and, you might be forever chained to buying the materials from the original manufacturer. Their nominal resistance might also be higher than that of regular copper traces.
 
 # Existing solutions
 
-20W-Fibre Laser. Makes very good results and looks very promising.  
+20W-Fibre Laser. Makes very good results and looks very promising. However, is still quite expensive $1500-$2000 or greater.
 - https://hackaday.com/2021/01/11/laser-blasts-out-high-quality-pcbs/  
 - https://www.kurokesu.com/main/2021/01/07/making-fine-pitch-pcb-prototypes-with-fiber-laser/
 
-Too expensive for most  
+Other no-name CNCs: Cheap but dubious accuracy.
+
+Makes good results but, too expensive for most.  
 - https://www.makera.com/products/carvera
+
+This uses additive manufacturing.  
 - https://www.voltera.io/v-one
 
 This is just a paste printer. It doesn't mills pcbs. Applying paste is also something you can do by hand with not much effort.  
