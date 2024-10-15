@@ -12,7 +12,7 @@ Our solution to this would be to make a highly accessible and inexpensive PCB mi
 
 # Target Audience
 
-There are those that enjoy tinkering and fixing their machines, but there are also those that just want something that works. Our machine would mostly target people who want a PCB mill mostly to use as a tool, not as a hobby. This would mean creating a mill with a solid workflow that doesn't require much intervention.
+There are those that enjoy tinkering and fixing their machines, but there are also those that just want something that works. Our machine would mostly target people who want a PCB mill mostly to use as a tool, not as a hobby. This would mean creating a mill with a solid workflow that doesn't require much intervention from the user.
 
 ## Selling Points
 
@@ -43,6 +43,10 @@ TODO
   - Materials, energy, how does it flow through the system
 - More specific constriants
 
+## Functional Decomp
+
+![alt text](functional_decomp.png)
+
 
 ## Hardware Requirements
 Our mill should include these hardware features
@@ -67,6 +71,10 @@ Our mill should be able to produce PCBs with these minimum specs and tolerances.
 - Minimum build area: 100mmx150mm
 - Maximum CNC base dimensions: 500mmx500mm
 - Maximum CNC height: 400mm (not strict)
+- 80 W per hour power consumption
+- At most 2 hours per PCB, typically.
+
+Some of these specs are modeled after a typical desktop 3D printer.
 
 # Goals
 
@@ -85,6 +93,10 @@ Our mill should be able to produce PCBs with these minimum specs and tolerances.
 
 - Pick-and-Place (PnP) attachment
 - Solder paste printer
+
+## Tentative Timeline
+
+![alt text](timeline.png)
 
 # Members
 
@@ -122,3 +134,41 @@ This uses additive manufacturing.
 
 This is just a paste printer. It doesn't mills pcbs. Applying paste is also something you can do by hand with not much effort.  
 - https://www.amazon.com/YUNLAIGOTOP-Horizontal-Adjustment-Packaging-Advertising/dp/B0CG181YCH
+
+# References
+
+X. C. Wang and H. Y. Zheng, “High quality laser cutting of electronic printed circuit board substrates,” Circuit World, vol. 35, no. 4, pp. 46–55, Nov. 2009, doi: https://doi.org/10.1108/03056120911002415. 
+
+This research paper from Wang and Zheng, from the Singapore Institute of Manufacturing Technology, explores fabrication of PCBs using different laser cutting settings on a diode laser. The paper aimed to explore fabrication that minimized charring, delamination, and the heat affected zone that are often found on laser cut PCBs.   
+
+This paper was useful to compare PCB milling to laser cutting methods. Laser cutting appears to be very viable as a process, however it can be difficult to get the settings correct and the required equipment is expensive.  
+
+D. Wise, "PCB Fabrication," *Technology Interface International Journal*, Fall 2007. [Online]. Available: https://tiij.org/issues/issues/fall2007/01_Wise/Wise-PCB%20Fabrication.pdf. [Accessed: 30-Sep-2024]. 
+
+This is a paper from a Departmental Engineer at the University of New Mexico (UNM). It discusses the use of a mill to cut printed circuit boards(PCBs). The paper is written somewhat informally, and the references listed are not the most reliable. However, most of the information within the paper describes the hands-on process at UNM. 
+
+The paper walks the reader through the process of manufacturing a PCB on a desktop mill, all the way from design to settings up the machine and cutting. It discusses common issues and how to effectively set up a FR4 board.  
+
+A. Nae and B. Toma, "Study on Equipment for Manufacturing PCB," *Journal of Petroleum-Gas University of Ploiesti*, vol. 1, pp. 9-15, 2010. [Online]. Available: http://jpgt.upg-ploiesti.ro/wp-content/uploads/2024/02/9_T_1_2010_Nae-Andrei-BT.pdf. [Accessed: 30-Sep-2024]. 
+
+This is a paper from two researchers at Petroleum and Gas University of Ploiești. It discusses the use of stepper motors for creating CNC routers. It highlights design principles and details, and different ways in which routers are frequently designed. There is also some discussion on electrical design and software controls.  
+
+This is useful as a guide for designing a rigid motion system that can carry a spindle. There is good discussion on different design choices such as moving gantry vs bed, as well as different components and how they affect the motion system. 
+
+Y. Crama, O. E. Flippo, J. van de Klundert, and F. C. R. Spieksma, "The assembly of printed circuit boards: A case with multiple machines and multiple board types," *European Journal of Operational Research*, vol. 98, no. 2, pp. 457-472, 1997. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S0377221796002287. [Accessed: 30-Sep-2024]. 
+
+This paper by Crama et al. Optimizes the process of placing components onto a PCB in a production line.  
+
+This paper was not very useful to this project; while it provided some insight into PCB assembly, it was highly focused on a factory setting rather than a custom production/hobbyist environment. 
+
+‌ "Principles of Mechanical Design," MIT Center for Bits and Atoms, 2021. [Online]. Available: https://fab.cba.mit.edu/classes/865.21/topics/mechanical_design/index.html. [Accessed: 01-Oct-2024]. 
+
+A guide from MIT on mechanical design principles for building rigid and precise systems. It discusses important concepts such as stiffness, backlash, pretension, and more. 
+
+This is a useful reference for any potential designs in the future. It outlines many important fundamental concepts, both theoretically as well as physical design choices.   
+
+K. K. Tan, T. H. Lee, and S. Huang, *Precision Motion Control: Design and Implementation*, 2nd ed. London, UK: Springer-Verlag, 2008. Available: DOI: 10.1007/978-1-84800-021-6 
+
+This is a textbook on motion control systems. It covers everything from actuators to gantry designs, to control systems, and more.  
+
+It is very useful as an in depth guide to designing a motion system. While it is a bit old, many of the fundamental concepts are still applicable. 
