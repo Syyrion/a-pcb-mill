@@ -33,7 +33,7 @@ In order of importance, aspects of out machine that could distinguish it from ot
 
 ## Decision Matrix
 
-Each category is on a scale from 0 (worst) to 2 (best)
+Each category is on a scale from 0 (worst) to 2 (best). Each column has a weight. Higher multipliers means the category is more important.
 
 ### Categories
 
@@ -58,9 +58,10 @@ Each category is on a scale from 0 (worst) to 2 (best)
 
 |                          | viability | risk | complexity | time commitment | upgradability | flexibility | cost | accessibility | usability | total |
 | ------------------------ | --------- | ---- | ---------- | --------------- | ------------- | ----------- | ---- | ------------- | --------- | ----- |
-| **Convert a 3D printer** | 0         | 0    | 1          | 2               | 1             | 0           | 2    | 2             | 1         | 9     |
-| **Custom Gantry**        | 1         | 2    | 0          | 0               | 2             | 2           | 1    | 1             | 2         | 11    |
-| **Mod an existing CNC**  | 2         | 1    | 2          | 1               | 0             | 0           | 0    | 1             | 2         | 9     |
+| *Weight*                 | 1         | 2    | 2          | 3               | 1             | 1           | 2    | 2             | 1         | -     |
+| **Convert a 3D printer** | 0         | 0    | 1          | 2               | 1             | 1           | 2    | 1             | 1         | 17    |
+| **Custom Gantry**        | 2         | 2    | 0          | 1               | 2             | 2           | 1    | 1             | 2         | 19    |
+| **Mod an existing CNC**  | 1         | 1    | 1          | 2               | 0             | 0           | 1    | 0             | 1         | 14    |
 
 NOT FINAL YET, NEEDS REVIEW
 
