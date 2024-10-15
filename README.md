@@ -33,11 +33,36 @@ In order of importance, aspects of out machine that could distinguish it from ot
 
 ## Decision Matrix
 
-|     | cost | viability | least risk |
-| --- | ---- | --------- | ---------- |
+Each category is on a scale from 0 (worst) to 2 (best)
 
-TODO
-- Decision matrix
+### Categories
+
+1. **Viability**  
+  How practically possible the idea is.
+2. **Risk**  
+  How many engineering and development issues have been forseen or could be encountered.
+3. **Complexity**  
+  How complicated would development be.
+4. **Time Commitment**  
+  How much time it would take to develop the design.
+5. **Upgradability**  
+  How upgradable to the end-user the final design would be.
+6. **Flexibility**  
+  How easy the final design would be to customize or modify.
+7. **Cost**  
+  How much the final design would cost to the end-user.
+8. **Accessibility**  
+  How easy it would be for an end-user to use construct or otherwise acquire the product for themselves.
+9. **Usability**  
+  How easy it would be for the end-user to use the design.
+
+|                          | viability | risk | complexity | time commitment | upgradability | flexibility | cost | accessibility | usability | total |
+| ------------------------ | --------- | ---- | ---------- | --------------- | ------------- | ----------- | ---- | ------------- | --------- | ----- |
+| **Convert a 3D printer** | 0         | 0    | 1          | 2               | 1             | 0           | 2    | 2             | 1         | 9     |
+| **Custom Gantry**        | 1         | 2    | 0          | 0               | 2             | 2           | 1    | 1             | 2         | 11    |
+| **Mod an existing CNC**  | 2         | 1    | 2          | 1               | 0             | 0           | 0    | 1             | 2         | 9     |
+
+NOT FINAL YET, NEEDS REVIEW
 
 ## Functional Decomp
 
