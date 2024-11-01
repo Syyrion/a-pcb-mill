@@ -56,14 +56,15 @@ Each category is on a scale from 0 (worst) to 2 (best). Each column has a weight
 9. **Usability**  
   How easy it would be for the end-user to use the design.
 
-|                          | viability | risk | complexity | time commitment | upgradability | flexibility | cost | accessibility | usability | total |
-| ------------------------ | --------- | ---- | ---------- | --------------- | ------------- | ----------- | ---- | ------------- | --------- | ----- |
-| *Weight*                 | 1         | 2    | 2          | 3               | 1             | 1           | 2    | 2             | 1         | -     |
-| **Convert a 3D printer** | 0         | 0    | 1          | 2               | 1             | 1           | 2    | 1             | 1         | 17    |
-| **Custom Gantry**        | 2         | 2    | 0          | 1               | 2             | 2           | 1    | 1             | 2         | 19    |
-| **Mod an existing CNC**  | 1         | 1    | 1          | 2               | 0             | 0           | 1    | 0             | 1         | 14    |
+|                      | viability | risk | complexity | time commitment | upgradability | flexibility | cost | accessibility | usability | total |
+| -------------------- | --------- | ---- | ---------- | --------------- | ------------- | ----------- | ---- | ------------- | --------- | ----- |
+| *Weight*             | 3         | 2    | 2          | 3               | 1             | 1           | 2    | 2             | 1         | -     |
+| Convert a 3D printer | 1         | 0    | 1          | 2               | 1             | 1           | 2    | 1             | 1         | 20    |
+| **Custom Gantry**    | 2         | 2    | 0          | 1               | 2             | 2           | 1    | 1             | 2         | 23    |
+| Mod an existing CNC  | 1         | 1    | 1          | 2               | 0             | 0           | 1    | 0             | 1         | 16    |
 
-NOT FINAL YET, NEEDS REVIEW
+
+From this decision matrix and other feedback, we've decided that it's best for us to make a custom gantry. In addition, since 3D printers are so ubiquitous nowadays, it would be beneficial if we could try designing a custom gantry that uses salvaged parts off of an old 3D printer (an Ender 3, for example).
 
 ## Functional Decomp
 
@@ -95,6 +96,7 @@ Our mill should be able to produce PCBs with these minimum specs and tolerances.
 - Maximum CNC height: 400mm (not strict)
 - 80 W per hour power consumption
 - At most 2 hours per PCB, typically.
+- Minimum achievable spindle speed: 10000 RPM
 
 Some of these specs are modeled after a typical desktop 3D printer.
 
@@ -142,24 +144,27 @@ Some of these specs are modeled after a typical desktop 3D printer.
 
 # Existing solutions
 
-20W-Fibre Laser. Makes very good results and looks very promising. However, is still quite expensive $1500-$2000 or greater.
+
+**20W-Fibre Laser**  
+This uses a powerful laser to literally burn away the copper and even the FR4 to make the PCB. It's very accurate and very fast. However, this is still quite expensive at $1500-$2000 or greater. Also it releases a lot of fumes from the burning that definitely require a good ventilation system.
 - https://hackaday.com/2021/01/11/laser-blasts-out-high-quality-pcbs/  
 - https://www.kurokesu.com/main/2021/01/07/making-fine-pitch-pcb-prototypes-with-fiber-laser/
 
-Other no-name CNCs: Cheap but dubious accuracy.
+**Other no-name CNCs**  
+Some of these are advertised to be able to make PCBs but the cheap ones usually have dubious accuracy. You don't see many people using these since they're not really meant for this purpose.
+([Example video](https://youtu.be/xY-aoeJBqII)) (No links to specific products since you can find them basically everywhere.)
 
-Makes good results but, too expensive for most.  
+**Makera Carvera**  
+At $6000, most people couldn't afford this. It is designed to be able to make good PCBs.  
 - https://www.makera.com/products/carvera
 
-This uses additive manufacturing.  
+**Voltera V-One**  
+An additive PCB manufacturing machine. Also not very affordable. And as mentioned earlier, additive PCBs are too different from normal PCBs, so it's use is constrained to niche experimental designs.   
 - https://www.voltera.io/v-one
-
-This is just a paste printer. It doesn't mills pcbs. Applying paste is also something you can do by hand with not much effort.  
-- https://www.amazon.com/YUNLAIGOTOP-Horizontal-Adjustment-Packaging-Advertising/dp/B0CG181YCH
 
 # References
 
-X. C. Wang and H. Y. Zheng, “High quality laser cutting of electronic printed circuit board substrates,” Circuit World, vol. 35, no. 4, pp. 46–55, Nov. 2009, doi: https://doi.org/10.1108/03056120911002415. 
+X. C. Wang and H. Y. Zheng, “High quality laser cutting of electronic printed circuit board substrates,” Circuit World, vol. 35, no. 4, pp. 46-55, Nov. 2009, doi: https://doi.org/10.1108/03056120911002415. 
 
 This research paper from Wang and Zheng, from the Singapore Institute of Manufacturing Technology, explores fabrication of PCBs using different laser cutting settings on a diode laser. The paper aimed to explore fabrication that minimized charring, delamination, and the heat affected zone that are often found on laser cut PCBs.   
 
@@ -183,7 +188,7 @@ This paper by Crama et al. Optimizes the process of placing components onto a PC
 
 This paper was not very useful to this project; while it provided some insight into PCB assembly, it was highly focused on a factory setting rather than a custom production/hobbyist environment. 
 
-‌ "Principles of Mechanical Design," MIT Center for Bits and Atoms, 2021. [Online]. Available: https://fab.cba.mit.edu/classes/865.21/topics/mechanical_design/index.html. [Accessed: 01-Oct-2024]. 
+"Principles of Mechanical Design," MIT Center for Bits and Atoms, 2021. [Online]. Available: https://fab.cba.mit.edu/classes/865.21/topics/mechanical_design/index.html. [Accessed: 01-Oct-2024]. 
 
 A guide from MIT on mechanical design principles for building rigid and precise systems. It discusses important concepts such as stiffness, backlash, pretension, and more. 
 
