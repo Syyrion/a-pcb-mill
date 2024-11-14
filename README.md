@@ -142,8 +142,54 @@ Some of these specs are modeled after a typical desktop 3D printer.
   
   Also, we don't know what the conductive paste is. It's not solder paste but something else that acts as PCB traces. It could be a proprietary thing and, you might be forever chained to buying the materials from the original manufacturer. Their nominal resistance might also be higher than that of regular copper traces.
 
-# Existing solutions
+# Procedures
 
+## Draft PCB (No Soldermask)
+1. Create a PCB design and generate a gcode file for both the front and back of the PCB.
+   1. There already exists software to do this.
+2. Calibrate and zero the CNC to a known point.
+   1. Probably will use end stops.
+3. Clamp down a sheet of copper clad FR4 in a pre-determined location.
+4. Mill the first layer. Do not drill holes yet.
+5. Flip the board along the diagonal. This should keep the same corner at the origin point.
+6. Mill the second layer.
+7. Drill holes.
+8. Use thin wire through the via holes to create vias.
+   1. Solder and clamp them flat.
+9.  Use small copper rivets to plate through holes.
+   1.  Clamp them down and solder.
+10. Done
+
+## Finished PCB (With Soldermask)
+
+1. Create a PCB design and generate a gcode file for both the front and back of the PCB.
+   1. There already exists software to do this.
+2. Calibrate and zero the CNC to a known point.
+   1. Probably will use end stops.
+3. Clamp down a sheet of copper clad FR4 in a pre-determined location.
+4. Mill the first layer. Do not drill holes yet.
+5. Flip the board along the diagonal. This should keep the same corner at the origin point.
+6. Mill the second layer.  
+7. Drill only via holes.
+8. Use thin wire through the via holes to create vias.
+   1. Solder and clamp them flat.
+9. Apply soldermask on first side.
+   1.  This will cover everything including vias and undrilled through holes.
+10. Use CNC to expose surface mount pads and undrilled through holes.
+11. Repeat 9 and 10 for the other side.
+12. Use small copper rivets to plate through holes.
+   1.  Clamp them down and solder.
+13. Done
+
+
+# Safety
+
+- Mandated use of safety glasses while the machine is running.
+- CNC will be enclosed in some way to prevent particles and shield from debris.
+- A vacuum will be used to remove particles created from cutting.
+  - An alternative is to do the milling in a puddle of oil to trap all of the particles.
+
+# Existing solutions
 
 **20W-Fibre Laser**  
 This uses a powerful laser to literally burn away the copper and even the FR4 to make the PCB. It's very accurate and very fast. However, this is still quite expensive at $1500-$2000 or greater. Also it releases a lot of fumes from the burning that definitely require a good ventilation system.
